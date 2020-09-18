@@ -425,18 +425,6 @@ These goes before those shown in their full names."
                 (face-attribute 'mode-line-inactive :box)
                 )))
   (setq awesome-tray-mode-line-default-height (face-attribute 'mode-line :height))
-  ;; Disable mode line.
-  (set-face-attribute 'mode-line nil
-                      :foreground awesome-tray-mode-line-active-color
-                      :background awesome-tray-mode-line-active-color
-                      :height 0.1
-                      :box nil)
-  (set-face-attribute 'mode-line-inactive nil
-                      :foreground awesome-tray-mode-line-inactive-color
-                      :background awesome-tray-mode-line-inactive-color
-                      :height 0.1
-                      :box nil
-                      :inherit 'unspecified)
   ;; Add update timer.
   (setq awesome-tray-timer
         (run-with-timer 0 0.5 'awesome-tray-show-info))
